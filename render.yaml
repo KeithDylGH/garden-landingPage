@@ -4,7 +4,8 @@ services:
     # The branch to deploy from
     branch: main
     # The command to install dependencies and then build the project
-    buildCommand: "npm install && npm run build"
+    # Using "npm ci" for a clean, reliable install in CI/CD environments.
+    buildCommand: "npm ci && npm run build"
     # The directory containing the static files to publish.
     publishDir: dist
     # Add a rewrite rule to support single-page applications. This ensures
