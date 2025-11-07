@@ -6,7 +6,11 @@ interface FeatureCardProps {
   description: string;
 }
 
-const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description,
+}) => {
   return (
     <div className="relative bg-[#020202]/30 backdrop-blur-sm p-6 rounded-xl gradient-border h-full group overflow-hidden">
       {/* Hover glow effect */}
@@ -21,7 +25,7 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   );
 };
 
-const Features = () => {
+const Features: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 

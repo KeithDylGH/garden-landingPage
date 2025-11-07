@@ -6,7 +6,7 @@ import WhatsNew from "./components/WhatsNew";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="text-gray-200 min-h-screen">
       <Header />

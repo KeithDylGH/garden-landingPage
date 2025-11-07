@@ -13,7 +13,7 @@ const rotatingTexts = [
   "Anota tus estudios.",
 ];
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const CheckIcon = () => (
+const CheckIcon: React.FC = () => (
   <svg
     className="w-6 h-6 text-green-400 mr-3 flex-shrink-0"
     fill="none"
@@ -16,7 +16,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-const LaunchIcon = () => (
+const LaunchIcon: React.FC = () => (
   <svg
     className="w-6 h-6 text-green-400 mr-3 flex-shrink-0"
     viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ const LaunchIcon = () => (
   </svg>
 );
 
-const GardenLogoIcon = () => (
+const GardenLogoIcon: React.FC = () => (
   <svg
     className="w-6 h-6 text-green-400 mr-3 flex-shrink-0"
     viewBox="0 0 48 48"
@@ -44,7 +44,7 @@ const GardenLogoIcon = () => (
   </svg>
 );
 
-const AndroidIcon = () => (
+const AndroidIcon: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6 text-gray-500 ml-3"
@@ -55,7 +55,7 @@ const AndroidIcon = () => (
   </svg>
 );
 
-const WhatsNew = () => {
+const WhatsNew: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
