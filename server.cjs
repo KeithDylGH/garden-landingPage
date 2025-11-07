@@ -14,8 +14,9 @@ if (rawPort !== undefined) {
     console.error(
       `FATAL: PORT environment variable is not a positive integer: '${rawPort}'. Exiting to surface the configuration error to the host.`
     );
-    // Short delay to ensure logs flush on some platforms, then exit with error
-    setTimeout(() => process.exit(1), 50);
+    // Exit immediately to avoid starting the server (so logs are unambiguous)
+    // Use process.exit after writing the error; this should be visible in deploy logs.
+    process.exit(1);
   }
 }
 
