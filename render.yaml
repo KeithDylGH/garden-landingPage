@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: garden-landing-page
+    # Use the Node.js runtime environment
+    runtime: node
+    # The branch to deploy from
+    branch: main
+    # The command to install dependencies and then build the project
+    buildCommand: "npm install && npm run build"
+    # The command to start the web server, serving the compiled 'dist' folder
+    startCommand: "npm start"
