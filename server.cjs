@@ -20,6 +20,7 @@ if (rawPort !== undefined) {
   }
 }
 
+const fs = require("fs");
 const app = express();
 
 // Archivos estaticos (CSS, JS, IMAGES)
@@ -30,7 +31,17 @@ app.use(express.static(path.join(__dirname, "dist")));
 // For Express 5 / router compatibility use '*' rather than '/*'
 // Fallback para SPA sin usar path-to-regexp: sirve index.html para todas las rutas
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  const indexPath = path.join(__dirname, "dist", "index.html");
+  if (!fs.existsSync(indexPath)) {
+    // Return a helpful 404 when the production build is missing (avoids ENOENT stack traces)
+    res
+      .status(404)
+      .send(
+        "Not Found - production build not present. Run `npm run build` before starting or configure Render to run the build."
+      );
+    return;
+  }
+  res.sendFile(indexPath);
 });
 
 // LINEA DE ARRANQUE DEL SERVIDOR
