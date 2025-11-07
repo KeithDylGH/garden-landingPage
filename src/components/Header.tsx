@@ -86,10 +86,10 @@ const Header: React.FC = () => {
               </a>
             </div>
             <a
-              href="https://drive.google.com/file/d/1zvaZgUQcTGT4McNFQ8Yf0OiHvE5PFq1G/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1MNoh-vH8jL9QHqqPfNVwS89JW692D__p/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-block bg-white/10 text-white font-medium py-2 px-5 rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300 ease-in-out"
+              className="hidden md:inline-block bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:from-green-600 hover:to-green-700 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               Descargar
             </a>
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
               Novedades
             </a>
             <a
-              href="https://drive.google.com/file/d/1zvaZgUQcTGT4McNFQ8Yf0OiHvE5PFq1G/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1MNoh-vH8jL9QHqqPfNVwS89JW692D__p/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 ease-in-out transform hover:scale-105 inline-block"
