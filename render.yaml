@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: garden-landing-page
+    env: static
+    buildCommand: npm run build
+    publishPath: dist
